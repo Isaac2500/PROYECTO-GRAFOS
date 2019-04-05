@@ -1,0 +1,39 @@
+    /*
+    * RECIBE UNA LISTA PARA PODER REALIZAR LA MATRIZ DE ADYACENCIA
+    
+    public void matriz(ArrayList<Nodo> vertices){
+    
+    * ---MATRIZ DE ADYACENCIAS--
+          int[][] matriz_adya = new int[vertices.size()][vertices.size()];
+        
+        for (int i = 0; i < vertices.size(); i++) 
+        {
+            
+            for (int j = 0; j < vertices.size(); j++) 
+            {
+                   
+                for (int k = 0; k < vertices.size(); k++) 
+                {
+    
+                 ------------------------------------------------------------------------------------------
+                 |* 1. DADA LA POSICION i DE LA LISTA UNIVERSAL                                           |
+                 |* 2. DETERMINA SI LA POSICION j DE LA LISTA DE VERTICES DEL ELEMENTO                    |
+                 |*    i EN LA LISTA UNIVERSAL NO ES NULO.                                                |
+                 |* 3. SI NO LO ES VERICICA ADEMAS QUE DICHO ELEMENTO EN LA POSICION j                    |
+                 |*    ES IGUAL AL VERTICE DE LA POSICION k EN LA LISTA UNIVERSAL DE VERTICES             |
+                 |* 4. SI ES ASI, ASIGNA UN 1 EN LA POSICION (i,k) DE LA MATTRIZ DE ADYACENCIAS           |
+                 |* 5. SINO, ASIGNA UN 0 EN LA POSICION (i,k) DE LA MATTRIZ DE ADYACENCIAS                |
+                 ------------------------------------------------------------------------------------------
+    
+                    if (vertices.get(i).Nodo_Adyacentes.get(j) != null && vertices.get(i).Nodo_Adyacentes.get(j) == vertices.get(k).Nombre ) 
+                    {
+                        matriz_adya[i][k] = 1;   
+                    }else
+                    {
+                        matriz_adya[i][k] = 0;
+                    }
+                }
+            }
+        }
+    }
+    */
