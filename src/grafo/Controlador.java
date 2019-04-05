@@ -28,7 +28,7 @@ public class Controlador implements MouseListener,MouseMotionListener{
         ventana.setVisible(true);
         ventana.setLocationRelativeTo(null);
     }
-
+ 
     @Override
     public void mouseClicked(MouseEvent me) {
 
@@ -68,5 +68,5 @@ public class Controlador implements MouseListener,MouseMotionListener{
     public void mouseMoved(MouseEvent me) {
 
     }
-    
+ 
 }
