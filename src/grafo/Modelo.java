@@ -104,7 +104,7 @@ public class Modelo extends JPanel {
 
             }
     }
-/*
+    
     public void arrastrar(MouseEvent me){
 
         if (moververtice != null) {
@@ -125,5 +125,5 @@ public class Modelo extends JPanel {
         }
         repaint();
     }
-*/
+    
 }
