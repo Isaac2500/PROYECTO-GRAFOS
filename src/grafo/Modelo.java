@@ -93,8 +93,8 @@ public class Modelo extends JPanel {
                     } else {
 
                         p2 = new Point(vertex.getX(), vertex.getY());
-                        String nombre = JOptionPane.showInputDialog(null, "Ingresar valor en la arista");
-                        this.arrayAristas.add(new arista(p1.x, p1.y, p2.x, p2.y,nombre));
+                        //String nombre = JOptionPane.showInputDialog(null, "Ingresar valor en la arista");
+                        this.arrayAristas.add(new arista(p1.x, p1.y, p2.x, p2.y/*,nombre*/));
                         repaint();
                         p1 = null;
                         p2 = null;
