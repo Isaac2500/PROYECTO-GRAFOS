@@ -2,6 +2,7 @@
 package grafo;
 
 import java.awt.Graphics;
+import java.util.LinkedList;
 
 /**
  *
@@ -12,11 +13,13 @@ public class vertice {
     private int x, y;
     private String nombre;
     public final static int diam = 60;
+    private LinkedList<String>adya;
 
     public vertice(int x, int y, String nombre) {
         this.x = x;
         this.y = y;
         this.nombre = nombre;
+        adya = new LinkedList<>();
     }
 
     public void pintar(Graphics g) {
@@ -49,6 +52,21 @@ public class vertice {
     public String getNombre() {
 
         return this.nombre;
+    }
+    
+    public void agregar(String name){
+        
+        adya.add(name);
+    }
+    
+    public int nodes(){
+        
+        return this.adya.size();
+    }
+    
+    public void getLista(){
+        
+        
     }
 
 }
