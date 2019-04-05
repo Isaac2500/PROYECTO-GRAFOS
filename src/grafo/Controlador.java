@@ -61,7 +61,7 @@ public class Controlador implements MouseListener,MouseMotionListener{
     @Override
     public void mouseDragged(MouseEvent me) {
 
-        //this.mod.arrastrar(me);
+        this.mod.arrastrar(me);
     }
 
     @Override
