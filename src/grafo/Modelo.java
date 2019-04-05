@@ -75,7 +75,9 @@ public class Modelo extends JPanel {
           nombre = JOptionPane.showInputDialog("Ingresar nombre del vertice");
           this.arrayVertices.add(new vertice(me.getX(), me.getY(), nombre));
         }else{
-          JOptionPane.showMessageDialog(null, "No puedes insertar un vertice en ese punto","Error al pintar",JOptionPane.ERROR_MESSAGE);
+          //Debera mostrar el grado del nodo
+          grado(me.getPoint());
+          //JOptionPane.showMessageDialog(null, "No puedes insertar un vertice en ese punto","Error al pintar",JOptionPane.ERROR_MESSAGE);
         }
 
         repaint();
@@ -90,10 +92,13 @@ public class Modelo extends JPanel {
                     if (p1 == null) {
 
                         p1 = new Point(vertex.getX(), vertex.getY());
+                        String nombre = JOptionPane.showInputDialog(null, "Nodo al que se conectara");
+                        vertex.agregar(nombre);
                     } else {
 
                         p2 = new Point(vertex.getX(), vertex.getY());
-                        //String nombre = JOptionPane.showInputDialog(null, "Ingresar valor en la arista");
+                        String nombre = JOptionPane.showInputDialog(null, "Nodo al que se conectara");
+                        vertex.agregar(nombre);
                         this.arrayAristas.add(new arista(p1.x, p1.y, p2.x, p2.y/*,nombre*/));
                         repaint();
                         p1 = null;
@@ -126,4 +131,17 @@ public class Modelo extends JPanel {
         repaint();
     }
     
+    //Se ejecutara cuando se haga click sobre un vertice creado
+    public void grado(Point p){
+    
+      int g = 0;
+      Rectangle vert = new Rectangle(p.x-vertice.diam/2,p.y - vertice.diam/2,vertice.diam,vertice.diam);
+      for(vertice vertex : arrayVertices){
+
+        if(new Rectangle(vertex.getX()-vertice.diam/2,vertex.getY() - vertice.diam/2,vertice.diam,vertice.diam).intersects(vert)) {
+          JOptionPane.showMessageDialog(null, "El grado del Vertice " + vertex.getNombre()+" es "+ vertex.nodes());
+        }
+      }
+      
+    }
 }
